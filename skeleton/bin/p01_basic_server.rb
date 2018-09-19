@@ -9,13 +9,7 @@ require 'rack'
 app = Proc.new do |env|
   req = Rack::Request.new(env)
   res = Rack::Response.new 
-  res["Content-Type"] = "text/html"
-  # if rec.path == 
-  #   path = /w*
-  #   res.write(path)
-  # else 
-  #   res.write("Hello World!")
-  # end
+  res["Content-Type"] = "text/html"-
   res.write(req.path) 
   res.finish 
 end 
